@@ -1,0 +1,15 @@
+Please refer to the following steps before running the code:
+
+1. In the last line of code where the main method is called, the first parameter needs a directory. Here, you need to put your computer's directory path where the required data files are. (You don't need to pin point the folder as the function is capable of finding files in your whole system but it'll be faster if you do.)
+
+2. The second parameter is the image name with extension that we are trying to plot fixations on. This image name will be used to find corresponding CSV as well (As they have the exact same filename).
+
+3. Third parameter is the participant group whose fixations we want to plot (can be 'R', 'P' or 'T')*
+
+4. Fourth parameter is participant names that we want to plot for. It's an array of strings so it can have single/multiple values. Here, you can also use the word 'All' (Case-sensitive; and should be the only value in the array) if you want to display fixations for all participants of all groups  together.
+
+5. Final parameter is a boolean value. Set it to 'True' if you want to display heat-maps or 'False' for normal scatter plot.
+
+* Note: R - Expert Radiologists, P - Physicist, T - Trainees
+
+** IMPORTANT NOTE ** - All code has been created in Anaconda's Jupyter Application v5.7.4. Version is important as older version might not run the specific libraries that we used and might not display the figures properly. Also, please make sure latest version of python 3 is also installed.

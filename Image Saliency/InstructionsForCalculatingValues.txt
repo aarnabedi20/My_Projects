@@ -1,0 +1,9 @@
+Please refer to the following steps before running the code:
+
+1. In the last line of code where the main method is called multiple times, the first parameter needs a directory. Here, you need to put your computer's exact directory path where the csv files are. It's required here that you pin point a directory for the required participant as the function is designed to locate all files with a '.csv' extension in the given directory. (For eg. if you need degrees/distance for group R, then the directory should point towards the folder that has CSVs for Expert Radiologists.)
+
+2. Second parameter is participant names that we want to calculate values for. Here, you can also leave it as an empty string if you want to calculate distance/degrees for all participants in a group.
+
+3. Final parameter is a boolean value. Set it to 'True' if you want to calculate degrees and 'False' if you want distance.
+
+** IMPORTANT NOTE ** - All code has been created in Anaconda's Jupyter Application v5.7.4. Version is important as older version might not run the specific libraries that we used and might not display the figures properly. Also, please make sure latest version of python 3 is also installed.
