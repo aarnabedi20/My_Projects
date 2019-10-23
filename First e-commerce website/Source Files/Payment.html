@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/styling.css">
+<title>Secure Payment Form!
+</title>
+	<script language="javascript" type="text/javascript">
+	function validate(){
+		var number = document.getElementById("number").value;
+		var name1 = document.getElementById("name1").value;
+		var year = document.getElementById("year").value;
+		var month = document.getElementById("month").value;
+		var code = document.getElementById("code").value;
+		cardnumber();
+		checkname();
+		checkmonth();
+		checkyear();
+		checksecurity();
+	}
+		function cardnumber(){
+  		var cardno = /^\d{16}$/;
+		var cardno1 = /^(\d{4} \d{4} \d{4} \d{4})$/;
+  			if(number.value.match(cardno)|| number.value.match(cardno1))
+        		{
+      				return true;
+        		}
+     				 else
+       					 {
+        					alert("Not a valid credit card number!");
+        					return false;
+        				}
+}
+	function checkname(){
+		var name2=/^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
+		if (name1.value.match(name2)){
+			return true;
+		}
+		else{
+			alert("Enter a valid Card Holder's Name.");
+			return false;
+		}
+	}
+		function checkmonth(){
+		var month1=/^\d{2,2}$/;
+		if (month.value.match(month1)){
+			if (month.value<0){
+				alert("Enter valid month!");
+				return false;
+			}
+			else if (month.value>12){
+				alert("Enter valid month!");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+		else {
+			alert("Enter valid month!");
+			return false;
+		}
+	}
+	function checkyear(){
+		var year1=/^\d{4,4}$/;
+		if (year.value.match(year1)){
+			if (year.value>=2017){
+				return true;
+			}
+			else{
+				alert("Invalid Year")
+				return false;
+			}
+		}
+		else {
+			alert("Invalid Year");
+			return false;
+		}
+	}
+
+	function checksecurity(){
+		var code1=/^\d{3,3}$/;
+		if (code.value.match(code1)){
+			return true;
+		}
+		else{
+			alert("Invalid Security Code!")
+			return false;
+		}
+	}
+function focus1(){
+		document.form2.area.value = "Your credit card number. It should contain 16 digits with spaces or not and it shouldn't start with a space. It can be in a format XXXX XXX XXX XXX";
+	}
+function focus2(){
+		document.form2.area.value = "Its the name displayed on you card. It should only contain letters or spaces and it shouldn't start with a space.";
+	}
+function focus3(){
+		document.form2.area.value = "Month should be a valid integer with 2 digits. e.g 01 and 12.";
+	}
+function focus4(){
+		document.form2.area.value = "Year should be a valid integer with 4 digits greater than or equal to 2017. e.g 2017 and 2031.";
+	}
+function focus5(){
+		document.form2.area.value = "These are the last 3 digits found on the back of your card.";
+}
+function nofocus(){
+		document.form2.area.value="";
+}
+</script>
+</head>
+<body id='b9'>
+
+	<form onSubmit="validate()" name="form1">
+	<img src="../Images/header.jpg" id="im11"><br/><br/><h1 id="he">Please fill in your info : </h1>
+	Enter Credit Card Number : &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="number" onfocus="focus1()" onblur="nofocus()"><br/><br/>
+	Enter Card Holder Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="name1" onfocus="focus2()" onblur="nofocus()"><br/><br/>
+	Enter Expiry Date : <input type="text" size="3" id="month" onfocus="focus3()" onblur="nofocus()">/<input type="text" size="5" id="year" onfocus="focus4()" onblur="nofocus()">&nbsp;&nbsp;&nbsp;Security Code : <input type="text" size="3" id="code" onfocus="focus5()" onblur="nofocus()"><br/><br/><img src="../Images/stamp.jpg" id="im2">
+	<input id="b3" type="submit"><br/><br/><h6>Help Text :</h6></form>
+	<form name="form2" action="#"><textarea id='area1' name="area" rows="3" cols="40"></textarea></form>
+</body>
+</html>

@@ -1,0 +1,142 @@
+
+#shopping-cart table {
+    width:80%;
+    background-color:#F0F0F0;
+    text-align: center;
+    float: center;
+    margin-left:auto; 
+    margin-right:auto;
+}
+#shopping-cart table td {
+    background-color:#FFFFFF;
+}
+#i1 {
+  height: 15;
+  width: 15;
+}
+#i2 {
+  height: 100;
+  width: 500;
+}
+
+td{
+    text-align:center;
+    border-bottom:#F0F0F0 1px solid;
+}
+#to{
+    text-align: right;
+}
+#h1{
+    color: #4CAF50;
+}
+#b1 {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#b1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+#b1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+#b3 {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    float: center;
+}
+#b3:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+#b2 {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#b2:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+#b4 {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    float:right;
+}
+
+#b4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+#b4:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+#shopping-cart {
+    margin-bottom:30px;
+}
+#product-grid {
+    margin-bottom:30px;
+}
+#txt{
+    text-align: center;
+    height:30px;
+}
+.product-item {	
+    float:left;
+    margin:15px 100px;
+    padding:5px;
+}
+.product-item div{
+    text-align:center;
+    margin:10px;
+}
+.product-price {    
+	color: #2d752f;
+    font-weight: 600;
+}
