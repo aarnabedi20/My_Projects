@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="content-language" content="en" />
+<meta http-equiv="Content-Type" content="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link href="/main.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<script src="jquery-2.1.1.js"></script>
+<h1>Monthly Number of Broadcasts:</h1>
+<p id="table1"></p>
+<center>
+  <a id="button" href="legend.html">View Graphs</a>
+</center>
+<script>
+$.getJSON('data.json', function (data) {
+  console.log(data);
+/*
+  Start of the Table Code
+*/
+  var txt = "";
+  txt += "<table><tr><th>Date</th><th>BBC One</th><th>BBC Two</th><th>BBC Three</th><th>BBC Four</th><th>BBC News 24</th><th>CBBC</th><th>Cbeebies</th>";
+  var MonthNames = [
+    "January","February","March","April","May","June","July","August","September","October","November","December"
+  ]
+  for (x in data){
+    var date = new Date(x);
+    var index = date.getMonth();
+    var Month = MonthNames[index];
+    var Year = date.getFullYear();
+    txt += "<tr><td>" + Month + " " + Year + "</td><td>" + data[x].bbcone + "</td><td>" + data[x].bbctwo + "</td><td>" + data[x].bbcthree + "</td><td>" + data[x].bbcfour + "</td><td>" + data[x].bbcnews24 + "</td><td>" + data[x].cbbc + "</td><td>" + data[x].cbeebies + "</td></tr>";
+  }
+  txt += "</table>";
+  document.getElementById("table1").innerHTML = txt;
+
+});
+</script>
+</body>
+</html>
